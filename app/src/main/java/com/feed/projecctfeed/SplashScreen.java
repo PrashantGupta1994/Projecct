@@ -1,9 +1,10 @@
 package com.feed.projecctfeed;
 
-import android.app.Activity;
 import android.os.Bundle;
 
-public class SplashScreen extends Activity {
+import com.feed.projecctfeed.Base.BaseActivity;
+
+public class SplashScreen extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
