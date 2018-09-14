@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Project Feed</string>
+
+    <string name="test_title">The problem with this is that on background threads</string>
+    <string name="test_body">
+        The problem with this is that on background threads,
+        having an open Realm instance that you don’t close even when the thread execution is over is very costly,
+        and can cause strange errors. As such,
+        it’s recommended to close the Realm on your background thread when the execution is done in a finally block.
+        This includes IntentServices.
+    </string>
 </resources>

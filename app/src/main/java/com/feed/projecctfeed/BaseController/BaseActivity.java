@@ -13,6 +13,8 @@ import io.github.inflationx.calligraphy3.CalligraphyConfig;
 import io.github.inflationx.calligraphy3.CalligraphyInterceptor;
 import io.github.inflationx.viewpump.ViewPump;
 import io.github.inflationx.viewpump.ViewPumpContextWrapper;
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
 
 /**
  * @author Prashant
@@ -20,6 +22,8 @@ import io.github.inflationx.viewpump.ViewPumpContextWrapper;
  * */
 
 public class BaseActivity extends AppCompatActivity {
+
+    private static final String DB_NAME = "test.realm";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,15 @@ public class BaseActivity extends AppCompatActivity {
                                 .setFontAttrId(R.attr.fontPath)
                                 .build()))
                 .build());
+
+        //Config Realm
+        Realm.init(this);
+        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder()
+                .deleteRealmIfMigrationNeeded()
+                .name(DB_NAME)
+                .build();
+
+        Realm.setDefaultConfiguration(realmConfiguration);
     }
 
     @Override
