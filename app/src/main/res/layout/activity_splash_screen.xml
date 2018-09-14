@@ -6,7 +6,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto">
 
     <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="300dp"
         android:id="@+id/cvParent"
         android:layout_centerHorizontal="true"
@@ -37,6 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
                 android:text="Feed Application"
                 android:textAllCaps="true"
                 android:textSize="30sp"
