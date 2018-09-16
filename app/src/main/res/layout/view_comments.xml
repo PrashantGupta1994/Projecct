@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/bulletComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/comments_bullet_point"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tvComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="4dp"
+        android:text="@string/test_body"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvCommentStamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="end|top"
+        android:layout_marginStart="30dp"
+        android:layout_below="@+id/tvComment"
+        android:textColor="@color/timestamp"
+        android:text="@string/test_title"
+        android:textSize="13sp"
+        android:textStyle="bold"/>
+</RelativeLayout>

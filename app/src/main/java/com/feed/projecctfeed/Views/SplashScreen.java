@@ -9,7 +9,8 @@ import com.feed.projecctfeed.R;
 
 public class SplashScreen extends BaseActivity {
 
-    private final int SPLASH_DISPLAY_LENGTH = 4 * 1000;
+    /** Hold 2 seconds */
+    private final int SPLASH_DISPLAY_LENGTH = 2 * 1000;
     private final Handler rHandler = new Handler();
 
     @Override
@@ -26,6 +27,7 @@ public class SplashScreen extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        /* delay of 2 seconds of intro screen than go to main post screen. */
         rHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -38,6 +40,7 @@ public class SplashScreen extends BaseActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        /* remove callback from handler on destroy (prevent memory leaks if any.) */
         rHandler.removeCallbacksAndMessages(null);
         finish();
     }

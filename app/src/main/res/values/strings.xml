@@ -1,12 +1,22 @@
 <resources>
     <string name="app_name">Project Feed</string>
 
-    <string name="test_title">The problem with this is that on background threads</string>
+    <string name="test_title">Welcome Users</string>
     <string name="test_body">
-        The problem with this is that on background threads,
-        having an open Realm instance that you don’t close even when the thread execution is over is very costly,
-        and can cause strange errors. As such,
-        it’s recommended to close the Realm on your background thread when the execution is done in a finally block.
-        This includes IntentServices.
+        Dummy Text -
+        The greeting text on the welcome screen is your first opportunity to tell a person why they should start a conversation with your Messenger bot.
+        Some things you might include in your greeting text might include a brief description of what your bot does, such as key features, or a tag line.
+        This is also a great place to start establishing the style and tone of your bot.
+        The welcome screen is the first thing people see when they encounter your Messenger bot,and includes information that allows a person to learn about your bot and what it offers.
+        The welcome screen displays the name and responsiveness of your bot,the profile picture and cover photo from your Facebook Page, an optional greeting message, and the get started button.
     </string>
+
+    <string name="image_copyright">Image source : iStock by Getty Images&#8482;</string>
+
+    <string name="title_hint">Title - </string>
+    <string name="body_hint">Description - </string>
+
+    <string name="comments_label_underline"><u>Comments ● Click to write a comment…</u></string>
+    <string name="comments_hint">Write a comment…</string>
+    <string name="comments_bullet_point">●</string>
 </resources>

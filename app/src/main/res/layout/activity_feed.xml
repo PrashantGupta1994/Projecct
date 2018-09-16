@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="text"
+            type="com.feed.projecctfeed.HelperClasses.TextLength"/>
+    </data>
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
 
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/viewHeader"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         xmlns:card_view="http://schemas.android.com/apk/res-auto">
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:id="@+id/cvParent"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
@@ -22,34 +31,60 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             card_view:cardElevation="4dp"
-            card_view:cardCornerRadius="3dp"
+            card_view:cardCornerRadius="8dp"
             card_view:cardBackgroundColor="@android:color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:weightSum="2"
+                android:weightSum="3"
                 android:padding="8dp">
 
-                <EditText
-                    android:id="@+id/etTitle"
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/titleContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Post's title!"
-                    android:singleLine="true"
-                    android:background="#00000000"
-                    android:layout_weight="1" />
+                    app:counterEnabled="true"
+                    android:focusableInTouchMode="true"
+                    android:textColorHint="@android:color/black"
+                    app:counterMaxLength="@{text.title}">
 
-                <EditText
-                    android:id="@+id/etBody"
+                    <EditText
+                        android:id="@+id/etTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/title_hint"
+                        android:textStyle="bold"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:background="#00000000"
+                        android:layout_weight="1"
+                        android:imeOptions="actionDone"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/bodyContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="So, What's in your mind today!"
-                    android:background="#00000000"
-                    android:layout_weight="1"
-                    android:singleLine="true"
-                    android:imeOptions="actionDone"/>
+                    app:counterEnabled="true"
+                    android:focusableInTouchMode="true"
+                    android:textColorHint="@android:color/black"
+                    app:counterMaxLength="@{text.body}">
+
+                    <EditText
+                        android:id="@+id/etBody"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/body_hint"
+                        android:textStyle="bold"
+                        android:background="#00000000"
+                        android:layout_weight="2"
+                        android:maxLines="5"
+                        android:textColor="@android:color/black"
+                        android:imeOptions="actionSend"/>
+                </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
 
@@ -63,6 +98,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none"
-        android:padding="8dp" />
+        android:paddingTop="2dp"
+        android:background="@android:color/black"/>
 
 </RelativeLayout>
+</layout>

@@ -2,12 +2,19 @@ package com.feed.projecctfeed.RealmDB;
 
 import io.realm.RealmObject;
 
+/**
+ * <p>
+ *     A Plain POJO/Model class to handle RealmObject/DB.
+ * </p>
+ * */
+
 public class PostFeedDatabase extends RealmObject {
 
     //@PrimaryKey
     private int id;
-
-    private String mTitle, mBody, mTimeStamp;
+    private String mTitle;
+    private String mBody;
+    private String mTimeStamp;
     private String mUrl;
 
     public PostFeedDatabase() {
